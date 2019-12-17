@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: obstacles
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: bf17c15670cfcbd42823a426fd730e5b, type: 3}
+    totalSpriteSurfaceArea: 6716
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: 03a8920d67ee9ecc23003f3d9c9927ba
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: b3714d40a0ce811499dc454032e2cc69, type: 3}
+  - {fileID: 21300000, guid: 3fbb3701ca2ecee489a317474c52d102, type: 3}
+  - {fileID: 21300000, guid: e8584932f16b3cb4399ecc62424d8bd7, type: 3}
+  - {fileID: 21300000, guid: 7c6817525d4e3394b99ccdfe0c16451e, type: 3}
+  - {fileID: 21300000, guid: af21cc52dc0a4e1418ce3f69b61efe0a, type: 3}
+  - {fileID: 21300000, guid: 9230a7f30cf3f5d40b9f09f7dcb92b83, type: 3}
+  - {fileID: 21300000, guid: 384e0d749d5a2a343a97849d5679666d, type: 3}
+  - {fileID: 21300000, guid: 119f0cc51c2c45646bbd7e9072bd9823, type: 3}
+  - {fileID: 21300000, guid: 599281aef52b40f4e82a74c796e14091, type: 3}
+  - {fileID: 21300000, guid: 1c910eeead3996148894e54e1797a43f, type: 3}
+  - {fileID: 21300000, guid: 71f7835f5fc7caa44b84763540d287b0, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - tv-2
+  - tv-0
+  - crate
+  - trash
+  - desk-2
+  - dresser
+  - chair
+  - tv-1
+  - desk-3
+  - desk-1
+  - couch
+  m_Tag: obstacles
+  m_IsVariant: 0
