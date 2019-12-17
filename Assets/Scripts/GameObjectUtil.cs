@@ -13,7 +13,14 @@ public class GameObjectUtil{
 	}
 
 	public static void Destroy(GameObject gameObject){
-		GameObject.Destroy (gameObject);
+
+		var recycleGameObject = gameObject.GetComponent<RecycleGameObject>();
+
+		if(recycleGameObject != null){ // object has recycle script
+			recycleGameObject.ShutDown();
+		} else {
+			GameObject.Destroy (gameObject);
+		}
 	}
 
 }
