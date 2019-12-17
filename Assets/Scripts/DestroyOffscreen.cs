@@ -32,10 +32,10 @@ public class DestroyOffscreen : MonoBehaviour
 			OnOutOfBounds();
 		}
 	}
-	
+
 	public void OnOutOfBounds(){
 		offscreen = false;
-		Destroy(gameObject);
+		GameObjectUtil.Destroy(gameObject);
 	}
 
 }
