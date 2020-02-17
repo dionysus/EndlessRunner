@@ -12,7 +12,6 @@ public class InputState : MonoBehaviour
     public float absVelY = 0f;
     public bool standing;
     public float standingThreshold = 1;
-    // Start is called before the first frame update
 
     private Rigidbody2D body2d;
 
