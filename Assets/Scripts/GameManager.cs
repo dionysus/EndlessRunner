@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
 
     public GameObject playerPrefab;
+    private TimeManager timeManager;
     
     private GameObject player;
     private GameObject floor;
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
     void Awake(){
         floor = GameObject.Find("Foreground");
         spawner = GameObject.Find("Spawner").GetComponent<Spawner>();
+        timeManager = GetComponent<TimeManager>();
     }
     // Start is called before the first frame update
     void Start()
@@ -45,7 +47,8 @@ public class GameManager : MonoBehaviour
         //! When player is killed, the delegate is unlinked
         playerDestroyScript.DestroyCallback -= OnPlayerKilled;
 
-        player.GetComponent<Rigidbody2D>().velocity = Vector2.zero; 
+        player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        timeManager.ManipulateTime(0, 5.5f);
     }
 
     void ResetGame(){
