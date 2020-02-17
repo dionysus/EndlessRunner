@@ -5,7 +5,9 @@ using UnityEngine;
 public class DestroyOffscreen : MonoBehaviour
 {
 	public float offset = 16f; // how much offscreen before destroyed
-	public bool offscreen;
+	public delegate void OnDestroy();
+	public event OnDestroy DestroyCallback;
+	private bool offscreen;
 	private float offscreenX = 0;
 	private Rigidbody2D  body2d;
 
@@ -36,6 +38,12 @@ public class DestroyOffscreen : MonoBehaviour
 	public void OnOutOfBounds(){
 		offscreen = false;
 		GameObjectUtil.Destroy(gameObject);
+
+		if (DestroyCallback != null) {
+			DestroyCallback();
+		}
+
+
 	}
 
 }

@@ -37,12 +37,32 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+    void OnPlayerKilled(){
+        spawner.active = false;
+            // Destroy Player
+        var playerDestroyScript = player.GetComponent<DestroyOffscreen>();
+        //! When player is killed, the delegate is unlinked
+        playerDestroyScript.DestroyCallback -= OnPlayerKilled;
+
+        player.GetComponent<Rigidbody2D>().velocity = Vector2.zero; 
+    }
+
     void ResetGame(){
         spawner.active = true;
+
+        // Create Player object
         player = GameObjectUtil.Instantiate(
             playerPrefab, 
             new Vector3(0, (Screen.height/PixelPerfectCamera.pixelsToUnits)/2, 0)
         );
+
+        // Destroy Player
+        var playerDestroyScript = player.GetComponent<DestroyOffscreen>();
+        
+        //! when OnDestroyCallback called, OnPlayerKilled is called
+        playerDestroyScript.DestroyCallback += OnPlayerKilled; 
     }
+
 
 }
