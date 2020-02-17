@@ -20,7 +20,10 @@ public class Spawner : MonoBehaviour
 		yield return new WaitForSeconds(delay);
 		if(active){
 			var newTransform = transform;
-			GameObjectUtil.Instantiate(prefabs[Random.Range(0, prefabs.Length)], newTransform.position);
+			GameObjectUtil.Instantiate(
+				prefabs[Random.Range(0, prefabs.Length)], 
+				newTransform.position
+				);
 			ResetDelay();
 		}
 		StartCoroutine(EnemyGenerator());
