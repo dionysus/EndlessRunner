@@ -9,9 +9,12 @@ public class Obstacles : MonoBehaviour, IRecycle
     public Vector2 colliderOffset = Vector2.zero;
 
     public void Restart() {
+
+        // randomly select sprite for new Obstacle
         var renderer = GetComponent<SpriteRenderer>();
         renderer.sprite = sprites[Random.Range(0, sprites.Length)];
 
+        // Resize and Recenter BoxCollider of randomly selected sprite
         var collider = GetComponent<BoxCollider2D> ();
         var size = renderer.bounds.size;
         size.y += colliderOffset.y;
