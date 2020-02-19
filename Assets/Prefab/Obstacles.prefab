@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 384e0d749d5a2a343a97849d5679666d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -134,7 +134,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 32
-  offscreen: 0
 --- !u!114 &7157137300226556720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,7 +165,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 599281aef52b40f4e82a74c796e14091, type: 3}
   - {fileID: 21300000, guid: 9230a7f30cf3f5d40b9f09f7dcb92b83, type: 3}
   - {fileID: 21300000, guid: 7c6817525d4e3394b99ccdfe0c16451e, type: 3}
-  - {fileID: 21300000, guid: 3fbb3701ca2ecee489a317474c52d102, type: 3}
   colliderOffset: {x: 0, y: 0}
 --- !u!61 &2231575881061496504
 BoxCollider2D:
