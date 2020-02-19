@@ -70,7 +70,6 @@ public class GameManager : MonoBehaviour
 
         // Destroy Player
         var playerDestroyScript = player.GetComponent<DestroyOffscreen>();
-        
         //! when OnDestroyCallback called, OnPlayerKilled is called
         playerDestroyScript.DestroyCallback += OnPlayerKilled;
 
